@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-	public function index()
+	public function index(Request $request)
 	{
-		return response()->json(User::all());
+		return response()->json($request->user());
 	}
 
 	public function register(Request $request)
